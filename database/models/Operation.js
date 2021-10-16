@@ -33,7 +33,7 @@ module.exports = (sequelize, dataTypes) => {
     },
   };
   const config = {
-    tableName: "operation",
+    tableName: "operations",
     timestamps: false,
   };
   const Operation = sequelize.define(alias, cols, config);
@@ -41,15 +41,15 @@ module.exports = (sequelize, dataTypes) => {
   Operation.associate = function (models) {
     Operation.belongsTo(models.User, {
       as: "user",
-      foreingKey: "idUser",
+      foreignKey: "idUser",
     });
     Operation.belongsTo(models.Category, {
         as: "category",
-        foreingKey: "idCategory",
+        foreignKey: "idCategory",
     });
     Operation.belongsTo(models.Type, {
     as: "type",
-    foreingKey: "idType",
+    foreignKey: "idType",
     });
   };
   return Operation;
