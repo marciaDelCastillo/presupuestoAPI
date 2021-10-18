@@ -15,10 +15,6 @@ module.exports = (sequelize, dataTypes) => {
         type: dataTypes.STRING(255),
         allowNull: false,
       },
-      avatar: {
-        type: dataTypes.STRING(255),
-        allowNull: false,
-      },
       idRol: {
         type: dataTypes.INTEGER,
         allowNull: false,
